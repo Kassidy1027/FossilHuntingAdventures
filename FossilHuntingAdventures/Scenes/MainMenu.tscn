@@ -1,0 +1,191 @@
+[gd_scene load_steps=9 format=3 uid="uid://hkr2otn8i0u7"]
+
+[ext_resource type="Script" uid="uid://mquiyd2aypqc" path="res://Scripts/mainMenu.gd" id="1_853f1"]
+[ext_resource type="Texture2D" uid="uid://dital1qgqufhj" path="res://Assets/MainMenuBackground.png" id="1_tt5f1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_853f1"]
+texture = ExtResource("1_tt5f1")
+modulate_color = Color(0.310617, 0.310617, 0.310617, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8saeu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+shadow_color = Color(0, 0, 0, 0.631373)
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_853f1"]
+bg_color = Color(0.162066, 0.162066, 0.162065, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.435294)
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bnhvo"]
+bg_color = Color(0.162066, 0.162066, 0.162065, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.435294)
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tt5f1"]
+bg_color = Color(0.699196, 6.37732e-07, 2.88785e-07, 0.854902)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.435294)
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghw46"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+shadow_color = Color(0.241156, 0.241156, 0.241156, 1)
+shadow_size = 1
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_853f1")
+
+[node name="MenuBackground" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_853f1")
+
+[node name="GameTitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -93.0
+offset_right = 177.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_8saeu")
+text = "Fossil Hunting Adventures"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -30.0
+offset_right = 104.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxFlat_853f1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bnhvo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tt5f1")
+text = "Start Game"
+
+[node name="Objectives" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxFlat_853f1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bnhvo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tt5f1")
+text = "Objectives"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxFlat_853f1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bnhvo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tt5f1")
+text = "Exit
+"
+
+[node name="Objectives" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -102.0
+offset_right = 133.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_ghw46")
+text = "Objectives:
+"
+
+[node name="ObjDescription" type="Label" parent="Objectives"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 37.0
+offset_right = 241.0
+offset_bottom = 225.0
+theme_override_font_sizes/font_size = 19
+text = " - Explore the Area
+ - Dig up Fossils (Textured
+Dirt Blocks)
+ - Dig all Fossils to Advance 
+Levels
+ - Eliminate Enemies "
+
+[node name="Back" type="Button" parent="Objectives"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 7.0
+offset_right = 251.0
+offset_bottom = 38.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_853f1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bnhvo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tt5f1")
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Objectives" to="." method="_on_objectives_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Objectives/Back" to="." method="_on_button_pressed"]
