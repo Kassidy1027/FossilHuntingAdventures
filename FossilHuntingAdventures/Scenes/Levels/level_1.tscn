@@ -1842,7 +1842,7 @@ sources/0 = SubResource("TileSetAtlasSource_3mqfk")
 
 [node name="Level1" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." node_paths=PackedStringArray("player", "player_animation")]
 position = Vector2(1, 0)
 tile_set = SubResource("TileSet_rf6l5")
 format = 2
@@ -1859,6 +1859,8 @@ layer_4/tile_data = PackedInt32Array(-65516, 3604481, 1, 20, 3604481, 2, 65556, 
 layer_5/name = "Dig"
 layer_5/tile_data = PackedInt32Array(393241, 589825, 7, 458770, 589825, 7, 589848, 589825, 7, 458778, 655361, 7, 327701, 655361, 7, 327702, 720897, 7, 458775, 720897, 7, 327698, 720897, 7, 524309, 720897, 7, 393235, 720897, 7, 393239, 655361, 8, 458772, 655361, 8, 393238, 589825, 8, 524307, 589825, 8, 393236, 589825, 8, 524313, 655361, 8, 327691, 720897, 7, 393230, 720897, 7, 458768, 720897, 7, 458761, 720897, 7, 327696, 720897, 7, 393228, 655361, 8, 393233, 655361, 8, 458763, 589825, 7, 327694, 589825, 7, 458765, 589825, 7, 393231, 589825, 8, 327690, 589825, 8, 196609, 589825, 7, 327680, 589825, 7, 589823, 589825, 7, 720901, 589825, 7, 458759, 589825, 7, 327685, 589825, 7, 720896, 589825, 7, 196614, 655361, 7, 327682, 655361, 7, 524291, 655361, 7, 786434, 655361, 7, 393220, 589825, 7, 196610, 720897, 7, 327679, 720897, 7, 458753, 720897, 7, 655365, 720897, 7, 655362, 655361, 7, 524295, 720897, 7, 327688, 720897, 7, 262147, 655361, 8, 393218, 655361, 8, 524293, 655361, 8, 524289, 655361, 8, 786436, 655361, 8, 720899, 655361, 8, 458750, 655361, 8, 262151, 589825, 8, 327683, 589825, 8, 458752, 589825, 8, 720894, 589825, 8, 589828, 589825, 8, 393222, 589825, 8)
 script = ExtResource("3_iixi8")
+player = NodePath("../Player")
+player_animation = NodePath("../Player/AnimatedSprite2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(6, 92)
@@ -1868,3 +1870,5 @@ position = Vector2(6, 92)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
+
+[editable path="Player"]

@@ -163,7 +163,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oh1g1")
 }],
-"loop": true,
+"loop": false,
 "name": &"Digging",
 "speed": 5.0
 }, {
@@ -234,7 +234,7 @@ script = ExtResource("1_encxe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tttff")
-animation = &"Idle"
+animation = &"Digging"
 speed_scale = 1.7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
